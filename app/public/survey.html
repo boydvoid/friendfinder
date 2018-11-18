@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Survey</title>
+    </head>
+
+    <!--Bootstrap  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <body>
+        <div class="container">
+            <h1>Survey Questions</h1>
+            <hr>
+            <h3>Name</h3>
+            <input type="text" id="name" class="form-control">
+            <h3>Link to Image</h3>
+            <input type="text" id='photo' class="form-control">
+            <hr>
+            <div>
+                <h3>Question 1</h3>
+                <p>Your mind is always buzzing with unexplored ideas and plans.</p>
+
+                <select id="score1" name="">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                </select>
+            </div>
+
+            <div>
+                <h3>Question 2</h3>
+                <p>Generally speaking, you rely more on your experience than your imagination.</p>
+
+                <select id="score2" name="">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                </select>
+            </div>
+            <div>
+                <h3>Question 3</h3>
+                <p>You find it easy to stay relaxed and focused even when there is some pressure.
+                </p>
+
+                <select id="score3" name="">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                </select>
+            </div>
+            <div>
+                <h3>Question 4</h3>
+                <p>You rarely do something just out of sheer curiosity.</p>
+
+                <select id="score4" name="">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                </select>
+            </div>
+            <div>
+                <h3>Question 5</h3>
+                <p>People can rarely upset you.</p>
+
+                <select id="score5" name="">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                </select>
+            </div>
+            <div>
+                <h3>Question 6</h3>
+                <p>It is often difficult for you to relate to other people’s feelings.</p>
+
+                <select id="score6" name="">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                </select>
+            </div>
+            <div>
+                <h3>Question 7</h3>
+                <p>In a discussion, truth should be more important than people’s sensitivities.</p>
+
+                <select id="score7" name="">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                </select>
+            </div>
+            <div>
+                <h3>Question 8</h3>
+                <p>You rarely get carried away by fantasies and ideas.
+                </p>
+
+                <select id="score8" name="">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                </select>
+            </div>
+            <div>
+                <h3>Question 9</h3>
+                <p>You feel more energetic after spending time with a group of people.</p>
+
+                <select id="score9" name="">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                </select>
+            </div>
+            <div>
+                <h3>Question 10</h3>
+                <p>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</p>
+
+                <select id="score10" name="">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                </select>
+            </div>
+
+            <button class="submit btn btn-primary" type="submit" data-toggle="modal" data-target="#exampleModal">Submit</button>
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Your Closest Match!</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h3 id="match"></h3>
+                            <img id="matchImg" src="" alt="" width="200px" height="200px">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="container">
+                <p><a href="/api/friends">API Friends</a> | <a href="https://github.com/robaboyd/friendfinder">Github link</a></p>
+            </div>
+        </footer>
+    </body>
+
+    <script type="text/javascript">
+    let newFriend = {}
+    let difference = 0;
+    let userScore;
+    let compareArray =[]; 
+    let totalDifference;
+    let finalDifference = 1000;
+    let matchedName;
+    let matchedImage;
+
+$(document).on('click', '.submit', function (e) {
+    e.preventDefault();
+     newFriend = {
+    name: $('#name').val().trim(),
+        photo: $('#photo').val().trim(),
+        scores: [
+    $('#score1').find(":selected").text(),
+        $('#score2').find(":selected").text(),
+        $('#score3').find(":selected").text(),
+        $('#score4').find(":selected").text(),
+        $('#score5').find(":selected").text(),
+        $('#score6').find(":selected").text(),
+        $('#score7').find(":selected").text(),
+        $('#score8').find(":selected").text(),
+        $('#score9').find(":selected").text(),
+        $('#score10').find(":selected").text()
+]
+}
+  
+    //post data
+    $.post("/api/friends", newFriend, function(data){
+    if(data){
+    console.log('Added');
+}
+})
+    //read best match and display modal
+    $.ajax({url: "/api/friends", method: "GET"}).then(function (data) {
+        finalDifference = 1000;
+        difference = 0;
+    for(let i = 0; i < data.length; i++){
+        if(i === data.length - 1) {
+            $("#match").text(matchedName);
+            $("#matchImg").attr("src", matchedImage);
+        console.log(matchedName); 
+        break;
+        }
+        //compare
+        for(let j = 0; j < data[i].scores.length; j++){
+                let indexDiff = parseInt(data[i].scores[j]) - parseInt(newFriend.scores[j]) 
+                if(indexDiff < 0){
+                    indexDiff = indexDiff * -1;
+                }
+                difference = parseInt(difference) + indexDiff ;
+        }
+        if(difference < finalDifference) {
+            console.log('run')
+            finalDifference = difference;
+            matchedName = data[i].name;
+            matchedImage = data[i].photo;
+            console.log(difference);
+            console.log(finalDifference) 
+        }
+    }
+    $('#name').val("");
+    $('#photo').val("");
+    })
+});
+    </script>
+</html>
