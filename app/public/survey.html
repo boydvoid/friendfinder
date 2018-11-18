@@ -215,8 +215,8 @@ $(document).on('click', '.submit', function (e) {
     //read best match and display modal
     $.ajax({url: "/api/friends", method: "GET"}).then(function (data) {
         finalDifference = 1000;
-        difference = 0;
-    for(let i = 0; i < data.length; i++){
+        for(let i = 0; i < data.length; i++){
+            difference = 0;
         if(i === data.length - 1) {
             $("#match").text(matchedName);
             $("#matchImg").attr("src", matchedImage);
